@@ -9,7 +9,7 @@ This plugin allows you to open a URL.
 
 ## Usage ##
 ```javascript
-  openURL.open(successCallback, errorCallback, 'prefs:root=General');
+  window.openURL.open(successCallback, errorCallback, 'prefs:root=General');
 ```
 
 

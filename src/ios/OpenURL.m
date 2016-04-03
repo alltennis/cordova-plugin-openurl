@@ -11,8 +11,6 @@
     return;
   }
 
-  NSLog(url);
-
   BOOL result = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
   if (!result) {
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Unable to open URL"];

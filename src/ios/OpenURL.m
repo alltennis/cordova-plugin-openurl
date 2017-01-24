@@ -1,6 +1,7 @@
 #import "OpenURL.h"
 
 @implementation OpenURL
+@implementation AppDelegate
 
 - (void)open:(CDVInvokedUrlCommand *)command {
   NSString *url = [command.arguments objectAtIndex:0];
@@ -11,7 +12,24 @@
     return;
   }
 
-  BOOL result = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+  NSString *openAppSetting = @"UIApplicationOpenSettingsURLString";
+  BOOL result = NO;  
+
+  if ([url isEqualToString:openAppSetting])
+  {
+     if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]])
+     {   
+         result = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+     }
+  }
+  else
+  {
+     if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]])
+     {
+         result = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];   
+     }
+  }
+  
   if (!result) {
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Unable to open URL"];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];

@@ -10,6 +10,7 @@ This plugin allows you to open a URL.
 ## Usage ##
 ```javascript
   window.openURL.open(successCallback, errorCallback, 'prefs:root=General');
+  window.openURL.open(successCallback, errorCallback, 'UIApplicationOpenSettingsURLString');
 ```
 
 

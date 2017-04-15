@@ -3,7 +3,7 @@ This plugin allows you to open a URL.
 
 ## Installation ##
 ```javascript
-  cordova plugin add /Users/randdusing/Source/Bluetooth/cordova-plugin-openurl --variable URL_SCHEME=abc123
+  cordova plugin add https://github.com/alltennis/cordova-plugin-openurl.git --variable URL_SCHEME=abc123
 ```
 
 

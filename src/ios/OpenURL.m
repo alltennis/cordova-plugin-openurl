@@ -1,7 +1,7 @@
 #import "OpenURL.h"
 
 @implementation OpenURL
-@implementation AppDelegate
+//@implementation AppDelegate
 
 - (void)open:(CDVInvokedUrlCommand *)command {
   NSString *url = [command.arguments objectAtIndex:0];

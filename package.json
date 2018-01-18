@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-openurl",
+  "version": "1.0.0",
+  "description": "open a link or others",
+  "cordova": {
+    "id": "cordova-plugin-openurl",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alltennis/cordova-plugin-openurl.git"
+  },
+  "keywords": [
+    "openurl",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "alltennis <jack.wang@alltennis.cn> (https://github.com/alltennis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alltennis/cordova-plugin-openurl/issues"
+  },
+  "homepage": "https://github.com/alltennis/cordova-plugin-openurl#readme"
+}
